@@ -1,0 +1,20 @@
+<div class="container rounded">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Setting</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let member of members; index as i">
+        <th scope="row">{{ i+1 }}</th>
+        <td>{{ member.name }}</td>
+        <td>
+          <button class="btn btn-primary" [routerLink]="['/admin/edit', member._id]">Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

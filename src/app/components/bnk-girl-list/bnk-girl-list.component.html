@@ -1,0 +1,8 @@
+<div class="row card-deck">
+  <div *ngFor="let member of members" class="col-sm-4 mb-3">
+    <app-bnk-girl [member]="member"></app-bnk-girl>
+  </div>
+</div>
+<div class="row">
+  <button class="btn btn-primary" routerLink="/login">Login To Administrator</button>
+</div>

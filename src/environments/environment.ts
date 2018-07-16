@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  api_url: 'http://localhost:3000',
+  instagram_api_url: 'https://www.api.bnk48.com/api/social-feeds?page=1&max=1000000000000000&limit=19&username='
 };
 
 /*

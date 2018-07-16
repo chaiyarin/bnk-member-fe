@@ -1,0 +1,8 @@
+<div class="card" [routerLink]="['/instagram', member.instagramId]">
+  <div class="card-img-float">
+    <img [src]="member.imgUrl" class="card-img-top">
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ member.name | bnkSuffix }}</h5>
+  </div>
+</div>

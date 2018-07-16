@@ -1,0 +1,30 @@
+<div class="container">
+  <form [formGroup]="editForm"  *ngIf="editForm">
+    <div class="form-group">
+      <label> <strong>Name</strong> </label>
+      <input type="text" class="form-control" placeholder="Enter Name" formControlName="name">
+    </div>
+    <div class="form-group">
+      <label>
+        <strong>Image Url</strong>
+        <span style="color: red;" *ngIf="editForm.get('imgUrl').getError('urlWrong')">โปรดระบุ</span>
+      </label>
+      <input type="text" class="form-control" placeholder="Enter Image Url" formControlName="imgUrl">
+    </div>
+    <div class="form-group">
+      <label><strong>Instagram Id</strong></label>
+      <input type="text" class="form-control" placeholder="Enter Instagram ID" formControlName="instagramId">
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <button type="submit" class="btn btn-primary" (click)="save()">Save</button>
+      </div>
+      <div class="col-4 text-center">
+        <button routerLink="/admin" class="btn">Back</button>
+      </div>
+      <div class="col-4 text-right">
+        <button type="submit" class="btn btn-primary" (click)="resetDataMember();">Reset</button>
+      </div>
+    </div>
+  </form>
+</div>
